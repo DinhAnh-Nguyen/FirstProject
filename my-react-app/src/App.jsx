@@ -35,3 +35,7 @@ export default App
 
 // 3. defaultProps = default values for props in case they are not passed from the parent component
 //                   name: "Guest"
+//                   will soon be obsolete, therefore use JavaScript parameters instead
+//                   example: function Student({ name = 'John Doe', age = 20 }) {
+//                              Some component code
+//                            }
