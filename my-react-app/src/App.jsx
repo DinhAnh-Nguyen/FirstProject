@@ -4,6 +4,7 @@ import Food from './Food.jsx'
 import Card from './Card.jsx'
 import Button from './Button/Button.jsx'
 import Student from './Student.jsx'
+import UserGreeting from './UserGreeting.jsx'
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
             <Student></Student>
             <Food></Food>
             <Button></Button>
+            <UserGreeting isLoggedIn={true} username="Daniel"></UserGreeting>
+            <UserGreeting></UserGreeting>
             <Footer></Footer>
         </>
     );
@@ -39,3 +42,6 @@ export default App
 //                   example: function Student({ name = 'John Doe', age = 20 }) {
 //                              Some component code
 //                            }
+
+// 4. conditional rendering = allows you to control what gets rendered in your application
+//                            based on certain conditions (show, hide, or change components)
