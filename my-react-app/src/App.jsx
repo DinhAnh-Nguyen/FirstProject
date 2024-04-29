@@ -5,6 +5,8 @@ import Card from './Card.jsx'
 import Button from './Button/Button.jsx'
 import Student from './Student.jsx'
 import UserGreeting from './UserGreeting.jsx'
+import List from './List.jsx'
+import MyComponent from './MyComponent.jsx'
 
 function App() {
 
@@ -12,6 +14,7 @@ function App() {
         <>
             <Header></Header>
             <Card></Card>
+            <List></List>
             <Student name="Daniel" age={19} isStudent={true}></Student>
             <Student name="Nathan" age={18} isStudent={true}></Student>
             <Student name="Mark" age={18} isStudent={true}></Student>
@@ -21,6 +24,7 @@ function App() {
             <Button></Button>
             <UserGreeting isLoggedIn={true} username="Daniel"></UserGreeting>
             <UserGreeting></UserGreeting>
+            <MyComponent></MyComponent>
             <Footer></Footer>
         </>
     );
@@ -45,3 +49,10 @@ export default App
 
 // 4. conditional rendering = allows you to control what gets rendered in your application
 //                            based on certain conditions (show, hide, or change components)
+
+// 5. React Hook = special function that allows functional components to use React features without
+//                 class components (useState, useEffect, useContext, useCallBack, and more).
+
+//    useState() = a React hook that allows the creation of a stateful variable
+//                 AND a setter function to update its value in the VIRTUAL DOM.
+//                 [name, setName]
