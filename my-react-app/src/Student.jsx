@@ -11,7 +11,7 @@ function Student ({name="Guest", age=0, isStudent=false}) {
     );
 }
 
-Student.proptypes = {
+Student.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number,
     isStudent: PropTypes.bool,

@@ -4,9 +4,12 @@ import Food from './Food.jsx'
 import Card from './Card.jsx'
 import Button from './Button/Button.jsx'
 import Student from './Student.jsx'
+<<<<<<< HEAD
 import UserGreeting from './UserGreeting.jsx'
 import List from './List.jsx'
 import MyComponent from './MyComponent.jsx'
+=======
+>>>>>>> parent of 51ec1ae (Conditional Rendering)
 
 function App() {
 
@@ -22,9 +25,12 @@ function App() {
             <Student></Student>
             <Food></Food>
             <Button></Button>
+<<<<<<< HEAD
             <UserGreeting isLoggedIn={true} username="Daniel"></UserGreeting>
             <UserGreeting></UserGreeting>
             <MyComponent></MyComponent>
+=======
+>>>>>>> parent of 51ec1ae (Conditional Rendering)
             <Footer></Footer>
         </>
     );
@@ -46,6 +52,7 @@ export default App
 //                   example: function Student({ name = 'John Doe', age = 20 }) {
 //                              Some component code
 //                            }
+<<<<<<< HEAD
 
 // 4. conditional rendering = allows you to control what gets rendered in your application
 //                            based on certain conditions (show, hide, or change components)
@@ -56,3 +63,5 @@ export default App
 //    useState() = a React hook that allows the creation of a stateful variable
 //                 AND a setter function to update its value in the VIRTUAL DOM.
 //                 [name, setName]
+=======
+>>>>>>> parent of 51ec1ae (Conditional Rendering)
