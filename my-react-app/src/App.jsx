@@ -22,12 +22,9 @@ function App() {
             <Student></Student>
             <Food></Food>
             <Button></Button>
-<<<<<<< HEAD
             <UserGreeting isLoggedIn={true} username="Daniel"></UserGreeting>
             <UserGreeting></UserGreeting>
             <MyComponent></MyComponent>
-=======
->>>>>>> parent of 51ec1ae (Conditional Rendering)
             <Footer></Footer>
         </>
     );
