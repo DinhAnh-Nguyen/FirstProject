@@ -6,6 +6,7 @@ import Button from './Button/Button.jsx'
 import Student from './Student.jsx'
 import List from './List.jsx'
 import MyComponent from './MyComponent.jsx'
+import ProfilePicture from './ProfilePicture.jsx'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
             <Student></Student>
             <Food></Food>
             <Button></Button>
+            <ProfilePicture></ProfilePicture>
             <MyComponent></MyComponent>
             <Footer></Footer>
         </>
@@ -69,3 +71,6 @@ export default App
 //    useState() = a React hook that allows the creation of a stateful variable
 //                 AND a setter function to update its value in the VIRTUAL DOM.
 //                 [name, setName]
+
+// 6. Click Event = An interaction when a user clicks on a specific element .
+//                  We can respond to clicks by passing a callback to the onClick event handler.
