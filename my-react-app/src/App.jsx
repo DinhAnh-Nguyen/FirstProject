@@ -7,6 +7,7 @@ import Student from './Student.jsx'
 import List from './List.jsx'
 import MyComponent from './MyComponent.jsx'
 import ProfilePicture from './ProfilePicture.jsx'
+import ColorPicker from './ColorPicker.jsx'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
             <Button></Button>
             <ProfilePicture></ProfilePicture>
             <MyComponent></MyComponent>
+            <ColorPicker></ColorPicker>
             <Footer></Footer>
         </>
     );
@@ -74,4 +76,6 @@ export default App
 //    useState() = a React hook that allows the creation of a stateful variable
 //                 AND a setter function to update its value in the VIRTUAL DOM.
 //                 [name, setName]
+
+
 
