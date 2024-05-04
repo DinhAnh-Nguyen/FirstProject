@@ -109,32 +109,61 @@ function MyComponent () {
     //     </div>
     // );
 
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
 
-    function increment() {
-        setCount(c => c + 1);
-        setCount(c => c + 1);
-        setCount(c => c + 1);
+    // function increment() {
+    //     setCount(c => c + 1);
+    //     setCount(c => c + 1);
+    //     setCount(c => c + 1);
+    // }
+
+    // function decrement() {
+    //     setCount(c => c - 1);
+    //     setCount(c => c - 1);
+    //     setCount(c => c - 1);
+    // }
+
+    // function reset () {
+    //     setCount(c => c = 0);
+    // }
+
+    // return (
+    //     <div>
+    //         <p>Count: {count}</p>
+    //         <button onClick={decrement}>Decrement</button>
+    //         <button onClick={reset}>Reset</button>
+    //         <button onClick={increment}>Increment</button>
+    //     </div>
+    // );
+
+    const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
+
+    function handleAddFood () {
+
+        // After entering a value, that value will be assigned to newFood.
+        // Then, the value in the input field will reset itself.
+        const newFood = document.getElementById("foodInput").value;
+        document.getElementById("foodInput").value= "";
+
+        setFoods(f => [...f, newFood]);
     }
 
-    function decrement() {
-        setCount(c => c - 1);
-        setCount(c => c - 1);
-        setCount(c => c - 1);
-    }
-
-    function reset () {
-        setCount(c => c = 0);
+    function handleRemoveFood (index) {
+        
+        setFoods(foods.filter((_, i) => i !== index));
     }
 
     return (
         <div>
-            <p>Count: {count}</p>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={reset}>Reset</button>
-            <button onClick={increment}>Increment</button>
+            <h2>List of Food</h2>
+            <ul>
+                {foods.map((food, index) => <li key={index} onClick={() => handleRemoveFood(index)}>{food}</li>)}
+            </ul>
+            <input type="text" id="foodInput" placeholder="Enter food name"></input>
+            <button onClick={handleAddFood}>Add Food</button>
+            <button onClick={handleRemoveFood}>Remove Food</button>
         </div>
-    );
+    )
 }
 
-export default MyComponent 
+export default MyComponent
