@@ -65,12 +65,13 @@ export default App
 // 4. conditional rendering = allows you to control what gets rendered in your application
 //                            based on certain conditions (show, hide, or change components)
 
-// 5. React Hook = special function that allows functional components to use React features without
+// 5. Click Event = An interaction when a user clicks on a specific element .
+//                  We can respond to clicks by passing a callback to the onClick event handler.
+
+// 6. React Hook = special function that allows functional components to use React features without
 //                 class components (useState, useEffect, useContext, useCallBack, and more).
 
 //    useState() = a React hook that allows the creation of a stateful variable
 //                 AND a setter function to update its value in the VIRTUAL DOM.
 //                 [name, setName]
 
-// 6. Click Event = An interaction when a user clicks on a specific element .
-//                  We can respond to clicks by passing a callback to the onClick event handler.
