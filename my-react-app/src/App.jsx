@@ -76,6 +76,3 @@ export default App
 //    useState() = a React hook that allows the creation of a stateful variable
 //                 AND a setter function to update its value in the VIRTUAL DOM.
 //                 [name, setName]
-
-
-
