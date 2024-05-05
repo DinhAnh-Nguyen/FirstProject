@@ -76,3 +76,25 @@ export default App
 //    useState() = a React hook that allows the creation of a stateful variable
 //                 AND a setter function to update its value in the VIRTUAL DOM.
 //                 [name, setName]
+
+//    useEffect() = React Hook that tells React to DO SOME CODE WHEN (pick one):
+//                  This component re-renders
+//                  This component mounts (mount: create a dependence to the DOM)
+//                  The state of a value
+
+//                  useEffect(function, [dependencies])
+
+//                  1. useEffect(() => {})          // Runs after every re-render
+//                  2. useEffect(() => {}, [])      // Runs only on mount
+//                  3. useEffect(() => {}, [value]) // Runs on mount + when value changes
+
+//                  USES
+//                  #1. Event Listeners
+//                  #2. DOM Manipulation
+//                  #3. Subscriptions (real-time updates)
+//                  #4. Fetching Data from an API
+//                  #5. Clean up when a component unmounts (unmount: remove a dependence to the DOM)
+
+//    useContext() = React Hook that allows you to share values
+//                   between multiple levels of components
+//                   without passing props through each level
