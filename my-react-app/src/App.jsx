@@ -112,3 +112,11 @@ export default App
 //                   1. import React, {useContext} from 'react';
 //                      import {MyContext} from './ComponentA';
 //                   2. const value = useContext(MyContext);
+
+//    useRef() = "use Reference" does not cause re-renders when its value changes.
+//               when you want a component to "remember" some information,
+//               but you don't want that information to trigger new renders.
+
+//               1. Accessing/Interacting with DOM elements
+//               2. Handling Focus, Animations, and Transitions
+//               3. Managing Timers and Intervals

@@ -19,7 +19,7 @@
 // By convention, name the PENDING state argument for the first letter of the state variable name, like a for
 // age. However, you may also call it like prevAge or something else that you find clearer.
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 
 function MyComponent () {
 
@@ -245,32 +245,74 @@ function MyComponent () {
     //     </>
     // );
 
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
+    // const [width, setWidth] = useState(window.innerWidth);
+    // const [height, setHeight] = useState(window.innerHeight);
 
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        console.log("EVENT LISTENER ADDED");
+    // useEffect(() => {
+    //     window.addEventListener("resize", handleResize);
+    //     console.log("EVENT LISTENER ADDED");
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-            console.log("EVENT LISTENER REMOVED");
-        }
-    }, []);
+    //     return () => {
+    //         window.removeEventListener("resize", handleResize);
+    //         console.log("EVENT LISTENER REMOVED");
+    //     }
+    // }, []);
     
-    useEffect(() => {
-        document.title = `Size: ${width} x ${height}`;
-    }, [width, height]);
+    // useEffect(() => {
+    //     document.title = `Size: ${width} x ${height}`;
+    // }, [width, height]);
 
-    function handleResize () {
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);  
+    // function handleResize () {
+    //     setWidth(window.innerWidth);
+    //     setHeight(window.innerHeight);  
+    // }
+
+    // return (<>
+    //     <p>Window Width: {width}px</p>
+    //     <p>Window Height: {height}px</p>
+    // </>);
+
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
+    const inputRef3 = useRef(null);
+
+    useEffect(() => {
+        console.log("COMPONENT RENDERED");
+    });
+
+    function handleClick1 () {
+        inputRef1.current.focus();
+        inputRef1.current.style.backgroundColor = "yellow";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "";
     }
 
-    return (<>
-        <p>Window Width: {width}px</p>
-        <p>Window Height: {height}px</p>
-    </>);
+    function handleClick2 () {
+        inputRef2.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "yellow";
+        inputRef3.current.style.backgroundColor = "";
+    }
+
+    function handleClick3 () {
+        inputRef3.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "yellow";
+    }
+
+    return (
+        <div>
+            <button onClick={handleClick1}>Click me 1!</button>
+            <input ref={inputRef1}></input>
+
+            <button onClick={handleClick2}>Click me 2!</button>
+            <input ref={inputRef2}></input>
+
+            <button onClick={handleClick3}>Click me 3!</button>
+            <input ref={inputRef3}></input>
+        </div>
+    );
 }
 
-export default MyComponent
+export default MyComponent 
