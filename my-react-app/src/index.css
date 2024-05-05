@@ -139,6 +139,7 @@ body {
   cursor: pointer;
 }
 
+/* Styling for the color picker component */
 .color-picker-container {
   display: flex;
   flex-direction: column;
@@ -174,4 +175,10 @@ input[type="color"] {
   padding: 5px;
   border-radius: 10px;
   border: 3px solid hsl(0, 0%, 80%);
+}
+
+/* Styling for the list component */
+.box {
+  border: 3px solid;
+  padding: 25px;
 }
